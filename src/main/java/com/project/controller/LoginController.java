@@ -21,8 +21,6 @@ public class LoginController {
 		return new ModelAndView("login");
 	}
 
-	
-	
 	@GetMapping("admin/index")
 	public ModelAndView adminIndex() {
 		return new ModelAndView("admin/index");
@@ -43,5 +41,7 @@ public class LoginController {
 			request.getSession().setAttribute("statusText", "Logout Successfully!");
 		}
 		return "login";
+
 	}
+	// This is test commit
 }
