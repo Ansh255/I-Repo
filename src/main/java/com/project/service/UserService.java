@@ -10,4 +10,8 @@ public interface UserService {
 
 	void deleteUser(int id);
 
+	void saveUser(UserVO userVO);
+
+	List<UserVO> findById(int id);
+
 }

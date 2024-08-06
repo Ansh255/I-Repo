@@ -6,10 +6,10 @@ import com.project.model.UserVO;
 
 public interface UserDAO {
 
-	List findAll();
+	List<UserVO> findAll();
 
 	List<UserVO> findById(int id);
 
-	void save(UserVO userVO);
+	void saveUser(UserVO userVO);
 
 }

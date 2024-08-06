@@ -3,7 +3,7 @@ package com.project.model;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "UserInput")
+@Table(name = "user_tbl")
 public class UserVO {
 
 	@Id
@@ -34,6 +34,15 @@ public class UserVO {
 
 	@Column(name = "status")
 	private boolean status = true;
+
+	@ManyToOne
+	private StateVO stateVO;
+
+	@ManyToOne
+	private CityVO cityVO;
+
+	@ManyToOne
+	private LoginVO loginVO;
 
 	public int getId() {
 		return id;
@@ -105,6 +114,30 @@ public class UserVO {
 
 	public void setStatus(boolean status) {
 		this.status = status;
+	}
+
+	public StateVO getStateVO() {
+		return stateVO;
+	}
+
+	public void setStateVO(StateVO stateVO) {
+		this.stateVO = stateVO;
+	}
+
+	public CityVO getCityVO() {
+		return cityVO;
+	}
+
+	public void setCityVO(CityVO cityVO) {
+		this.cityVO = cityVO;
+	}
+
+	public LoginVO getLoginVO() {
+		return loginVO;
+	}
+
+	public void setLoginVO(LoginVO loginVO) {
+		this.loginVO = loginVO;
 	}
 
 }
