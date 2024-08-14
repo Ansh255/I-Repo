@@ -14,5 +14,7 @@ public interface StateService {
 	void saveState(StateVO stateVO);
 
 	List<StateVO> findByState(int id);
+	List<StateVO> findByState(int id);
+	List<StateVO> findByState(int id);
 
 }
